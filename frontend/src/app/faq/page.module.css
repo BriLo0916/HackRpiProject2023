@@ -1,15 +1,12 @@
 
-.accordion {
-  display: grid;
-  place-content: center;
-  grid-template-columns: repeat(auto-fit, min(100%, 30rem));
-  min-height: 90vh;
+.accordion-container {
+  min-height: 75vh;
   place-items: start;
   gap: 1rem;
   margin: 0;
   padding: 1rem;
   color: #227093;
-  background: #eee;
+  /* background: #eee; */
 }
 
 /* Core styles/functionality */
@@ -64,9 +61,6 @@
   justify-content: flex-end;
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
-}
-.accordion--radio {
-  background: #ff5252;
 }
 
 /* Arrow animation */
