@@ -1,4 +1,6 @@
 import styles from './page.module.css';
+import Image from 'next/image';
+
 
 export default function Home() {
   return (
@@ -20,7 +22,18 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <p> This project was made during HackRPI 2023</p>
+        <a 
+          href="https://github.com/BriLo0916/HackRpiProject2023"
+          className={styles.footerLink}
+        >
+          <Image 
+            src="/github.svg"
+            alt="github logo" 
+            width={24}
+            height={24}
+          />
+            <p> This project was made during HackRPI 2023</p>
+        </a>
       </footer>
     </div>
   );

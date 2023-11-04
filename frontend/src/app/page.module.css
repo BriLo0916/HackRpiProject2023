@@ -59,9 +59,19 @@
   margin-top: 40px;
   background-color: #f8f9fa;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer p {
-  font-size: 1em;
+  font-size: 1rem;
   color: #555;
+}
+
+.footerLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
