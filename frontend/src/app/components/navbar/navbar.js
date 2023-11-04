@@ -6,7 +6,7 @@ function Navbar() {
   return ( 
     <>
     <div className={styles["nav-container"]}>
-      <h2>Medical ChatBot</h2>
+      <h2>MedMind</h2>
       <div className={styles["gap"]} />
       <Link href="/"> Home </Link>
       <Link href="/resources"> Resources</Link>

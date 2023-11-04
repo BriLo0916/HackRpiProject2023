@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>Welcome to our Medical ChatBot</h1>
+        <h1>Welcome to MedMind: our Medical Chatbot</h1>
         <p>Empowering mental health through technology</p>
       </header>
 
@@ -20,7 +20,7 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <p>&copy; 2023 Medical ChatBot. All rights reserved.</p>
+        <p> This project was made during HackRPI 2023</p>
       </footer>
     </div>
   );
