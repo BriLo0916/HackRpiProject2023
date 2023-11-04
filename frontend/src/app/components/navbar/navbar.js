@@ -1,20 +1,20 @@
-  import Link from "next/link";
+import Link from "next/link";
 
-  import styles from "./navbar.module.css";
+import styles from "./navbar.module.css";
 
-  function Navbar() {
-    return ( 
-      <>
-      <div className={styles["nav-container"]}>
-        <h2>Medical ChatBot</h2>
-        <div className={styles["gap"]} />
-        <Link href="/"> Home </Link>
-        <Link href="/resources"> Resources</Link>
-        <Link href="/faq">FAQ </Link>
-        <Link href="/privacy">Privacy </Link>
-        </div>
-      </>
-    );
-  }
+function Navbar() {
+  return ( 
+    <>
+    <div className={styles["nav-container"]}>
+      <h2>Medical ChatBot</h2>
+      <div className={styles["gap"]} />
+      <Link href="/"> Home </Link>
+      <Link href="/resources"> Resources</Link>
+      <Link href="/faq">FAQ </Link>
+      <Link href="/privacy">Privacy </Link>
+      </div>
+    </>
+  );
+}
 
-  export default Navbar;
+export default Navbar;
