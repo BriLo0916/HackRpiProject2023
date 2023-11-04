@@ -1,11 +1,18 @@
 import Link from "next/link";
 
+import styles from "./navbar.module.css";
+
 function Navbar() {
   return ( 
     <>
-    <h2>This is some text</h2>
-    <Link href="/"> Home </Link>
-    <Link href="/resources"> Reresource pagsources</Link>
+    <div className={styles["nav-container"]}>
+      <h2>MedMind</h2>
+      <div className={styles["gap"]} />
+      <Link href="/"> Home </Link>
+      <a href="http://localhost:8000">Chatbot</a>
+      <Link href="/resources"> Resources</Link>
+      <Link href="/faq">FAQ </Link>
+      </div>
     </>
   );
 }
