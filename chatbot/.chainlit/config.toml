@@ -35,7 +35,7 @@ name = "MedMind"
 show_readme_as_default = true
 
 # Description of the app and chatbot. This is used for HTML tags.
-# description = "A mental health chatbot that serves as a companion to ease the user through their mental health struggles."
+description = "A mental health chatbot that serves as a companion to ease the user through their mental health struggles."
 
 # Large size content are by default collapsed for a cleaner ui
 default_collapse_content = true
@@ -47,7 +47,7 @@ default_expand_messages = false
 hide_cot = false
 
 # Link to your github repo. This will add a github button in the UI's header.
-# github = "https://github.com/BriLo0916/HackRpiProject2023"
+github = "https://github.com/BriLo0916/HackRpiProject2023"
 
 # Specify a CSS file that can be used to customize the user interface.
 # The CSS file can be served from the public directory or via an external link.

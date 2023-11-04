@@ -49,8 +49,9 @@ def load_llm():
 
 #QA Model Function
 def qa_bot():
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
-                                       model_kwargs={'device': 'cuda'},
+                                       model_kwargs={'device': device},
                                        cache_folder='embeddings_cache')
     db = FAISS.load_local(DB_FAISS_PATH, embeddings)
     llm = load_llm()
@@ -71,7 +72,7 @@ async def start():
     chain = qa_bot()
     msg = cl.Message(content="Starting the bot...")
     await msg.send()
-    msg.content = "Hi, Welcome to MedMind. What is your query?"
+    msg.content = "Hi, Welcome to MedMind. How can I help you today?"
     await msg.update()
 
     cl.user_session.set("chain", chain)

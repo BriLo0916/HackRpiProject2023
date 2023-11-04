@@ -8,6 +8,8 @@ DB_FAISS_PATH = 'vectorstore/db_faiss'
 
 # Create vector database
 def create_vector_db():
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
     loader = DirectoryLoader(DATA_PATH,
                              glob='*.pdf',
                              loader_cls=PyPDFLoader)
@@ -18,7 +20,7 @@ def create_vector_db():
     texts = text_splitter.split_documents(documents)
 
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2',
-                                       model_kwargs={'device': 'cuda'},
+                                       model_kwargs={'device': device},
                                        cache_folder='embeddings_cache')
 
     db = FAISS.from_documents(texts, embeddings)
