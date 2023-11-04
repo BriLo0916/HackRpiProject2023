@@ -9,9 +9,9 @@ function Navbar() {
       <h2>MedMind</h2>
       <div className={styles["gap"]} />
       <Link href="/"> Home </Link>
+      <a href="http://localhost:8000">Chatbot</a>
       <Link href="/resources"> Resources</Link>
       <Link href="/faq">FAQ </Link>
-      <Link href="/privacy">Privacy </Link>
       </div>
     </>
   );

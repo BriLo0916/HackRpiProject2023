@@ -32,8 +32,10 @@ export default function Home() {
             width={24}
             height={24}
           />
-            <p> This project was made during HackRPI 2023</p>
+            <p> This project was made with <span style={{color:"red"}}>&lt;3</span> during HackRPI 2023</p>
+          
         </a>
+        <p>For your privacy, no data is being collected.</p>
       </footer>
     </div>
   );

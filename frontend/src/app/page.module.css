@@ -1,12 +1,15 @@
 .container {
   max-width: 1200px;
+  height: 90vh;
   margin: 0 auto;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .header h1 {
@@ -17,6 +20,7 @@
 .header p {
   font-size: 1.2em;
   color: #555;
+  margin-top: 10px;
 }
 
 .intro,
@@ -36,6 +40,7 @@
 .chatbot p {
   font-size: 1.2em;
   color: #555;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -54,14 +59,17 @@
   transform: scale(1.05); /* Slightly scale up on hover */
 }
 
+
 .footer {
   text-align: center;
   margin-top: 40px;
   background-color: #f8f9fa;
   padding: 20px 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 }
 
 .footer p {
@@ -72,6 +80,5 @@
 .footerLink {
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center; 
 }
