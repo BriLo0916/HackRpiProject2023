@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Chatbot related files
+chatbot/venv/
+chatbot/__pycache__/
+chatbot/embeddings_cache/
+chatbot/data/
