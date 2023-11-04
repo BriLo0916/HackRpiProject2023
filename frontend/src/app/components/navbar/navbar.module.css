@@ -1,0 +1,11 @@
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.gap {
+  flex-grow: 1;
+}
