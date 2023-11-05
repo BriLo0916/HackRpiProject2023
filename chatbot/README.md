@@ -122,5 +122,9 @@ What role does professional therapy or counseling play in addressing family trau
 Can you provide guidance on setting boundaries and managing relationships with family members who may have contributed to the trauma?
 ```
 
+## Inspiration
+
+[Llama2-Medical-Chatbot](https://github.com/AIAnytime/Llama2-Medical-Chatbot)
+
 ## License
 This project is licensed under the MIT License.
