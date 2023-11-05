@@ -1,10 +1,11 @@
+import torch
+import chainlit as cl
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.prompts import PromptTemplate
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.llms import CTransformers
 from langchain.chains import RetrievalQA
-import chainlit as cl
 
 DB_FAISS_PATH = 'vectorstore/db_faiss'
 
@@ -30,7 +31,10 @@ def set_custom_prompt():
 def retrieval_qa_chain(llm, prompt, db):
     qa_chain = RetrievalQA.from_chain_type(llm=llm,
                                        chain_type='stuff',
-                                       retriever=db.as_retriever(search_kwargs={'k': 2}),
+                                       retriever=db.as_retriever(
+                                        # search_type='similarity_score_threshold',
+                                        search_kwargs={'k': 1}
+                                        ),
                                        return_source_documents=True,
                                        chain_type_kwargs={'prompt': prompt}
                                        )
@@ -43,7 +47,7 @@ def load_llm():
         model = "TheBloke/Llama-2-7B-Chat-GGML",
         model_type="llama",
         max_new_tokens = 1024,
-        temperature = 0.2
+        temperature = 0.7
     )
     return llm
 
@@ -81,7 +85,7 @@ async def start():
 async def main(message: cl.Message):
     chain = cl.user_session.get("chain") 
     cb = cl.AsyncLangchainCallbackHandler(
-        stream_final_answer=True, answer_prefix_tokens=["FINAL", "ANSWER"]
+        stream_final_answer=False, answer_prefix_tokens=["FINAL", "ANSWER"]
     )
     cb.answer_reached = True
     res = await chain.acall(message.content, callbacks=[cb])
@@ -91,7 +95,7 @@ async def main(message: cl.Message):
     sources_str = ""
     for i, source in enumerate(sources, 1):
         source_, page_ = source.metadata['source'], source.metadata['page']
-        source_ = source_.replace("data/", "")
+        source_ = source_.replace("data/", "").replace(".pdf", "")
         sources_str += f"{i}. {source_} - page {page_}\n"
 
     if sources:
@@ -99,4 +103,5 @@ async def main(message: cl.Message):
     else:
         answer += "\nNo sources found"
 
+    print(answer)
     await cl.Message(content=answer).send()
