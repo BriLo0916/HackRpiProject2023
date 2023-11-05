@@ -24,7 +24,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <a 
           href="https://github.com/BriLo0916/HackRpiProject2023"
-          className={styles.footerLink}
+          className={styles.footerLink} target="_blank"
         >
           <Image 
             src="/github.svg"
