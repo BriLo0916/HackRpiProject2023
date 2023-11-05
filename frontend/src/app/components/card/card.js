@@ -16,7 +16,7 @@ function Card(props) {
                 />
                 <h3>{props.title}</h3>
                 <p>{props.description}</p>
-                <a href={props.link} className={styles["card-link"]} target="_blank">{props.linkDescription}</a>
+                <a href={props.link} className={styles["button"]}target="_blank">{props.linkDescription}</a>
             </div>
         </>
     );
