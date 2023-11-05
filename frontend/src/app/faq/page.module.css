@@ -1,9 +1,10 @@
 
 .accordion-container {
+  width: 75vw;
+  margin: 0 auto;
   min-height: 75vh;
   place-items: start;
   gap: 1rem;
-  margin: 0;
   padding: 1rem;
   color: #227093;
   /* background: #eee; */
