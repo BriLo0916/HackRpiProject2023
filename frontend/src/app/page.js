@@ -33,13 +33,13 @@ export default function Home() {
               <li>Advice for understanding family trauma</li>
             </ul>
           </div>
-        <button className={styles.button}>Get Started</button> {/* Added className */}
+        <a href="http://localhost:8000" target="_blank"><button className={styles.button}>Get Started</button> {/* Added className */}</a>
       </section>
 
       <footer className={styles.footer}>
         <a 
           href="https://github.com/BriLo0916/HackRpiProject2023"
-          className={styles.footerLink}
+          className={styles.footerLink} target="_blank"
         >
           <Image 
             src="/github.svg"

@@ -45,7 +45,7 @@ function Page() {
           <input type="checkbox" name="accordion-1" id="cb5" />
           <label htmlFor="cb5" className={styles["tab__label"]}>How can I access MedMind?</label>
           <div className={styles["tab__content"]}>
-            <p>As of now, you will need to host the machine learning model locally in order to acces it. Once you have hosted it, just click on the "chatbot" link on the navbar to access it!</p>
+            <p>As of now, you will need to host the machine learning model locally in order to acces it. Once you have hosted it, just click on the &quot;chatbot&quot; link on the navbar to access it!</p>
           </div>
         </div>
         <div className={styles["tab"]}>
