@@ -5,10 +5,10 @@ function Card(props) {
     return (
         <>
             <div className={styles["card"]}>
-                <img src={props.image} alt="My Image" target="_blank"/>
+                <img src={props.image} alt="My Image"/>
                 <h3>{props.title}</h3>
                 <p>{props.description}</p>
-                <a href={props.link} className={styles["card-link"]}>{props.linkDescription}</a>
+                <a href={props.link} className={styles["card-link"]} target="_blank">{props.linkDescription}</a>
             </div>
         </>
     );

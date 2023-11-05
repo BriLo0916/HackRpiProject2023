@@ -18,7 +18,7 @@ export default function Home() {
       <section className={styles.chatbot}>
         <h2>Meet Our Chatbot</h2>
         <p>Our advanced AI chatbot is here to help identify and address mental health concerns.</p>
-        <button className={styles.button}>Get Started</button> {/* Added className */}
+        <a href="http://localhost:8000" target="_blank"><button className={styles.button}>Get Started</button> {/* Added className */}</a>
       </section>
 
       <footer className={styles.footer}>
