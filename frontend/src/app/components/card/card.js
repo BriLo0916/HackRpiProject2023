@@ -5,10 +5,9 @@ function Card(props) {
     return (
         <>
             <div className={styles["card"]}>
-                <img src={props.image} alt={props.title} />
+                <img src={props.image} alt="My Image" />
                 <h3>{props.title}</h3>
                 <p>{props.description}</p>
-                <br />
                 <a href={props.link} className={styles["card-link"]}>{props.linkDescription}</a>
             </div>
         </>

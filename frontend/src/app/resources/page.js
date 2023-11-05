@@ -6,21 +6,21 @@ function Page() {
     {
       title: 'Headspace',
       description: 'Meditation and tips for well-being',
-      image: 'src\app\resources\headspace-1.jpg',
+      image: 'headspace.jpg',
       link: 'https://www.headspace.com/', 
       linkDescription: 'Headspace',
     },
     {
-      title: 'Card 2',
+      title: 'Suicide Hotlines',
       description: 'List of hotlines around the world',
-      image: '/suidcide-hotline-image.jpg',
+      image: 'suidcidehotlineimage.jpg',
       link: 'https://www.psychologytoday.com/us/basics/suicide/suicide-prevention-hotlines-resources-worldwide', 
       linkDescription: 'Suicide Hotlines'
     },
     {
-      title: 'Card 3',
+      title: 'Psych2go',
       description: 'Educational videos on mental health',
-      image: '/channels4_profile.jpg',
+      image: 'channels4profile.jpg',
       link: 'https://www.youtube.com/@Psych2go', 
       linkDescription: 'Psych2go'
     },
@@ -31,6 +31,7 @@ function Page() {
         {cardsData.map((card, index) => (
           <Card 
             key = {index}
+            title={card.title}
             description={card.description}
             image={card.image}
             link={card.link} 
