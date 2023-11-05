@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './card.module.css';
+import Image from 'next/image';
 
 function Card(props) {
     return (
         <>
             <div className={styles["card"]}>
-                <img src={props.image} alt="My Image"/>
+                <Image href={props.image} alt="My Image"/>
                 <h3>{props.title}</h3>
                 <p>{props.description}</p>
                 <a href={props.link} className={styles["card-link"]} target="_blank">{props.linkDescription}</a>
