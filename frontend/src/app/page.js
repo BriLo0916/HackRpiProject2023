@@ -7,17 +7,32 @@ export default function Home() {
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>Welcome to MedMind: our Medical Chatbot</h1>
-        <p>Empowering mental health through technology</p>
+        <p>Empowering mental health through technology.</p>
       </header>
 
       <section className={styles.intro}>
         <h2>Our Mission</h2>
-        <p>Providing accessible and confidential support for mental health issues.</p>
+        <p>To provide accessible and confidential support for mental health issues through technology.</p>
       </section>
 
       <section className={styles.chatbot}>
         <h2>Meet Our Chatbot</h2>
-        <p>Our advanced AI chatbot is here to help identify and address mental health concerns.</p>
+        <p>Our advanced AI chatbot is here to help identify and address mental health concerns.
+          It is your new knowledgeable friend who is well-versed in a number of areas.
+          Including but not limited to:
+        </p>
+        <div>
+            <ul>
+              <li>Different mental health conditions</li>
+              <li>Self-love</li>
+              <li>Trauma</li>
+              <li>Recovering from addiction</li>
+              <li>Advice for highly-sensitive people</li>
+              <li>Burnout</li>
+              <li>Advice for people healing from emotional pain</li>
+              <li>Advice for understanding family trauma</li>
+            </ul>
+          </div>
         <button className={styles.button}>Get Started</button> {/* Added className */}
       </section>
 

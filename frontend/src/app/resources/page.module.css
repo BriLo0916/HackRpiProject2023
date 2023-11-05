@@ -3,3 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.resources-containers img {
+    width: 33%;
+}

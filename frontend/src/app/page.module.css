@@ -43,6 +43,14 @@
   margin-bottom: 20px;
 }
 
+.chatbot ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
 .button {
   background-color: #007bff;
   color: #fff;
