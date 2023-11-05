@@ -19,20 +19,7 @@ export default function Home() {
         <h2>Meet Our Chatbot</h2>
         <p>Our advanced AI chatbot is here to help identify and address mental health concerns.
           It is your new knowledgeable friend who is well-versed in a number of areas.
-          Including but not limited to:
         </p>
-        <div>
-            <ul>
-              <li>Different mental health conditions</li>
-              <li>Self-love</li>
-              <li>Trauma</li>
-              <li>Recovering from addiction</li>
-              <li>Advice for highly-sensitive people</li>
-              <li>Burnout</li>
-              <li>Advice for people healing from emotional pain</li>
-              <li>Advice for understanding family trauma</li>
-            </ul>
-          </div>
         <a href="http://localhost:8000" target="_blank"><button className={styles.button}>Get Started</button> {/* Added className */}</a>
       </section>
 
